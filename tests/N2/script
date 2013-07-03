@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS -N mcci_3
+#PBS -l nodes=2
+#PBS -l walltime=24:00:00
+
+cd $PBS_O_WORKDIR
+echo $PBS_O_WORKDIR
+export PARNODES=2
+
+
+NP=`wc -l $PBS_NODEFILE | awk '{print $1}'`
+echo $NP > nodes.txt
+sort $PBS_NODEFILE | uniq -c | awk '{ printf("%s:%s\n", $2, $1); }' > nodesfile.txt
+NUMHOSTS=`wc -l nodesfile.txt | awk '{print $1}'`
+
+/opt/mpich-1.2.7/p4_pathscale64/bin/mpirun -machinefile $PBS_NODEFILE -np 2 mcci

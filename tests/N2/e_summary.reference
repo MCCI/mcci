@@ -1,0 +1,98 @@
+Wed Oct 31 12:38:52 
+ 
+                    m c c i  3.0
+ 
+               written by J.C. Greer
+ 
+    =============================================
+    J.C. Greer, J. Chem. Phys. 103 (1995) p. 1821
+    J.C. Greer, J. Comp. Phys. 146 (1998) p. 181 
+    =============================================
+ 
+ 
+ The following parameters were read from mcci.in
+ 
+ parameters with no default values:
+ ----------------------------------
+ 
+ inflg                        =      0
+ n_alpha                      =      7
+ n_beta                       =      7
+ s                            =      0.0000
+ cmin                         =      1.00E-02
+ maxtry                       =      2
+ 
+ 
+ parameters with default values:
+ -------------------------------
+ 
+ SCF_integral_filename        = moints.TM   
+ Wints_filename               = moints.CAP  
+ 
+ ieig                         =      1
+ mo_up(1:n_alpha)             =      1   2   3  34  35  47  54
+ mo_dn(1:n_beta)              =      1   2   3  34  35  47  54
+ 
+ nfreeze                      =      0
+ 
+ nactive                      =      0
+ lmin                         =    100
+ nbyte                        =      4
+ int_bits                     =     32
+ npfull                       =      2
+ lref                         =      0
+ lkeep                        =      0
+ conv_average                 =      7
+ conv_history                 =      7
+ hmin                         =      1.00E-18
+ davidson_stop                =      1.00E-07
+ bmin                         =      0.0000
+ bmax                         =      1.0000
+ cref                         =      0.1000
+ total frac                   =      2.0000
+ conv_thresh_e                =      1.0000
+ conv_thresh_l                =      0.0001
+ test                         =      F
+ time                         =      T
+ time_all                     =      F
+ generate_cfgs                =      T
+ nobrnch_first                =      F
+ nodiag                       =      F
+ i_want_conv                  =      T
+ npfull_conv                  =      T
+ caps                         =      F
+ 
+ Getting the one- and two-electron integrals from moints.TM
+ Warning: seed set by hand
+ ecore =     24.29878981540935     
+ Calculating            1 th state in this irrep
+ Running on            1  nodes
+ Branching factor      f =    2.000000000000000     
+ Davidson tolerance stop =   9.9999999999999995E-008
+ Coef.    tolerance cmin =   1.0000000000000000E-002
+ H        tolerance hmin =   1.0000000000000001E-018
+ 
+ 
+ Diagonalization            1
+ 
+ Iterations to convergence            1
+ E   =    (-108.9876031401438,0.000000000000000) from iter. diag.
+ Branched  CI vector length=           79
+ Pruned    CI vector length=            2    *** Full pruning ***
+ Cycle WALL time       1.370 s
+       USER time       1.350 s
+       SYS  time       0.020 s
+ Cumul. run time       1.370 s
+Wed Oct 31 12:38:59 
+ 
+ 
+ Diagonalization            2
+ 
+ Iterations to convergence            1
+ E   =    (-108.9870067345476,0.000000000000000) from iter. diag.
+ Branched  CI vector length=            2
+ Cycle WALL time       0.160 s
+       USER time       0.120 s
+       SYS  time       0.040 s
+ Cumul. run time       1.530 s
+Wed Oct 31 12:39:00 

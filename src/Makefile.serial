@@ -1,0 +1,116 @@
+
+#=======================================#
+#   Makefile to build  m c c i   2 . 0  #
+#=======================================#
+#
+       DEST   = ./
+#
+#------PGF90 on walton.ichec.ie------------------
+##
+#      FC     = mpif90
+#      FFLAGS = -tp=k8-64 -i4 -r8 -fpic -fastsse -O4
+#      LFLAGS = -tp=k8-64 -fpic -fastsse -O4 
+##     LFLAGS = -tp=k8-64 -fpic -L/usr/pgi/linux86-64/6.0/libso -fastsse -O4 
+##     FFLAGS = -tp=k8-64 -i4 -r8 -fpic -mcmodel=medium -mp -fastsse -O4 -Minline=levels:8 -I/opt/packages/gcc-compat/acml/include 
+##     LFLAGS = -tp=k8-64 -mp -fastsse -O4 -Minline=levels:8 -L/opt/packages/pgi-compat/acml/lib -fpic -mcmodel=medium -lblacs -lacml -lscalapack
+##
+#      LIBS   = ./libacml.a 
+##
+#------PGF90 on Grendel--------------------------
+# 
+       FC     = mpif90
+       FFLAGS = -tp=k8-64 -i4 -r8 -fastsse -O4 -fpic 
+       LFLAGS = -tp=k8-64 -lacml -fastsse -O4 -fpic -L/com/acml-3.6.0-pgi/pgi64_mp/lib 
+#      FFLAGS = -tp=k8-64 -i4 -r8 -fastsse -O4 -mcmodel=medium
+#      LFLAGS = -tp=k8-64 -lacml -fastsse -O4 -mcmodel=medium
+#      LIBS   =
+# 
+#------PATHF90 on sfi400.tyndall.ie--------------
+#
+#        FC     = mpif90
+#        FFLAGS = -m64 -shlib -i4 -r8 -O3 -OPT:Ofast
+#        LFLAGS = -m64 -shlib -L/opt/acml/pathscale64/lib -lacml
+#        LIBS   =
+#
+#------F95 on UNIX (Sun)--------------------------
+#
+#      FC     = f90
+#      FFLAGS = -fast -xarch=v9
+#      LFLAGS =
+#      LAPACK = lapack_sun_f90.a
+#      LIBS   = blas_sun_f90.a
+#
+#-------------------------------------------------
+
+OBJS =  mcci.serial.o get_int.o branch.o singles.o doubles.o reorder.o swap.o\
+        h_s_sparse.o random.o chk_list.o sym_init.o prune.o init.o\
+        gen_seed.o energy.o sch0.o sch1.o sch1_0.o sch1_1.o sch1_2.o\
+        sch2.o sch2_0.o sch2_1.o sch2_2.o sch2_3.o sch2_4.o sch2_5.o\
+        get_case1.o get_case2.o restart.o muHnu.o mxv_sparse.o \
+        wxmxv_sparse.o h_move.o s_move.o timer.o ck.o dump.o   \
+        ldump.o genealogy.o davidson.o h_s_reduced.o init_bk.o exc.o \
+        get_int_TM.o get_int_bTM.o precision.o read_mcci_in.o
+
+mcci.serial:   $(OBJS)
+	$(FC) $(LFLAGS) -o $(DEST)$@ $(OBJS) $(LAPACK) $(LIBS) 
+
+clean:
+	rm -f *.o mcci.serial
+ 
+mcci.serial.o:		params  dynamic_params
+get_int.o:              params  dynamic_params
+h_s_sparse.o:           params  dynamic_params
+h_s_reduced.o:          params
+muHnu.o:		params  dynamic_params
+reorder.o:		params  dynamic_params
+swap.o:   		params
+mxv_sparse.o:		params
+wxmxv_sparse.o:		params
+h_move.o:		params
+s_move.o:		params
+branch.o:		params  dynamic_params
+genealogy.o:		params  dynamic_params
+prune.o: 		params  dynamic_params
+singles.o:      	params  dynamic_params
+doubles.o:		params  dynamic_params
+chk_list.o:		params
+sym_init.o:		params
+cmminit.o:		params
+energy.o:  		params
+sch0.o:			params
+sch1.o:			params
+sch1_0.o:		params
+sch1_1.o:		params
+sch1_2.o:		params
+sch2.o:	   		params
+sch2_0.o:		params
+sch2_1.o:		params
+sch2_2.o:		params
+sch2_3.o:		params
+sch2_4.o:		params
+sch2_5.o:		params
+get_case1.o:		params
+get_case2.o:		params
+restart.o:		params
+dump.o:  		params
+ldump.o:  		params
+davidson.o:		params  dynamic_params
+h_s_reduced.o:		params
+init_bk.o:		params
+get_int_TM.o:		params  dynamic_params
+get_int_bTM.o:		params  dynamic_params
+precision.o:            params
+exc.o:                  params  dynamic_params
+read_mcci_in.o:		precision.o dynamic_params
+
+.SUFFIXES:
+.SUFFIXES: .o .f .f90
+
+.f.o:
+	$(FC) $(FFLAGS) -c $*.f
+
+.f90.o:
+	$(FC) $(FFLAGS) -c $*.f90
+
+
+

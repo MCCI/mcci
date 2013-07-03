@@ -1,0 +1,29 @@
+#!/bin/sh
+
+toplevel=`git rev-parse --show-toplevel`
+
+reference_data=`egrep -v "[0-2][0-9]\:[0-5][0-9]\:[0-5][0-9]|time" \
+                $toplevel/TESTS/N2/e_summary.reference`
+
+ln -s $toplevel/src/mcci $toplevel/TESTS/N2/
+
+nice $toplevel/TESTS/N2/mcci > $toplevel/TESTS/N2/out
+
+new_data=`egrep -v "[0-2][0-9]\:[0-5][0-9]\:[0-5][0-9]|time" \
+          $toplevel/TESTS/N2/e_summary`
+
+if [ "$new_data" != "$reference_data" ]
+then
+    echo "Error: e_summary data do not match up with reference values"
+    echo "In $toplevel/TESTS/N2"
+    exit 1
+else
+    echo "Consistency test passed in TESTS/N2, cleaning up.."
+    rm $toplevel/TESTS/N2/mcci
+    rm $toplevel/TESTS/N2/weight
+    rm $toplevel/TESTS/N2/civ_out
+    rm $toplevel/TESTS/N2/convergence
+    rm $toplevel/TESTS/N2/e_summary
+    rm $toplevel/TESTS/N2/out
+fi
+
