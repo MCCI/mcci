@@ -31,22 +31,22 @@ end function binomial
 
 function factorial(n)
   integer n
-  real*8  a(100),gamma,factorial,xx
+  real*8  a(100),gammaCI,factorial,xx
   save a
   data a/100*-1.0/
   if(n.lt.0) STOP'error: factorial of negative integer'
   xx =float(n+1)
   if(n.le.99) then
-     if(a(n+1).lt.0.0) a(n+1) = gamma(xx)
+     if(a(n+1).lt.0.0) a(n+1) = gammaCI(xx)
      factorial=a(n+1)
   else
-     factorial=gamma(xx)
+     factorial=gammaCI(xx)
   endif
   return
 end function factorial
 
-function gamma(xx)
-  real*8  gamma,xx
+function gammaCI(xx)
+  real*8  gammaCI,xx
   real*8  ser,stp,tmp,x,y,cof(6)
   integer j
   save    cof,stp
@@ -66,6 +66,6 @@ function gamma(xx)
      y=y+1.d0
      ser=ser+cof(j)/y
   enddo
-  gamma = tmp+dlog(stp*ser/x)
+  gammaCI = tmp+dlog(stp*ser/x)
   return 
-end function gamma
+end function gammaCI
