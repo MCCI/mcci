@@ -1,23 +1,24 @@
 ! mcci.in file for version three of mcci
-restart         = .false.                  ! .TRUE. sets inflg = 1, .FALSE sets inflg = 0
-n_up            = 7                       ! number of up electrons
-mo_up           = 1-3,34-35,47,54         ! occupied spin up orbital labels
-n_dn            = 7 
-mo_dn           = 1-3,34-35,47,54         ! occupied spin up orbital labels
+restart         = .true.                  ! .TRUE. sets inflg = 1, .FALSE sets inflg = 0
+n_up            = 6                       ! number of up electrons
+mo_up           = 1-2,34-35,47,54         ! occupied spin up orbital labels
+n_dn            = 6 
+mo_dn           = 1-2,34-35,47,54         ! occupied spin up orbital labels
 s               = 0.0                     ! spin ( units of h_bar ) (principle case m_s = s)
 ieig            = 1                       ! ith eigenvalue
-frac            = 2.0
-maxtry          = 2                    ! how many diagonalisations?
+frac            = 8.0
+maxtry          = 1                         ! how many diagonalisations?
 cmin            = 1.0d-2
+frozen_doubly   = 1,34
 npfull          = 2
-time            = .true.
+auto_cmin       = .false.
+nobrnch_first   = .true.
 i_want_conv     = .true.
 npfull_conv     = .true.
 conv_thresh_e   = 1.0
-conv_thresh_l   = 0.0001
+conv_thresh_l   = 1.0
 SCF_integral_filename= "moints.TM"
-caps            = .false.
 !parameters
-maxc = 100000
+maxc = 200000
 kmax = 35
-maxh = 100000000
+maxh = 400000000
