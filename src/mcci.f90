@@ -390,7 +390,7 @@ program mcci
         do i=1,length
            do n=1,nword
               if(n.eq.1) then
-                 write(40,'(i6,2x,e23.17,2x,i11,2x,i11)')&
+                 write(40,'(i6,2x,e24.17,2x,i11,2x,i11)')&
                       i,c(i)/dsqrt(dnorm),icij(1,n,i),icij(2,n,i)
               else
                  write(40,'(33x,i11,2x,i11)')&
@@ -398,7 +398,7 @@ program mcci
               endif
            enddo
            x = c(i)*w(i)/dnorm
-           write(60,'(i6,2x,e23.17,2x,e23.17)') i, x, x/e(ieig)
+           write(60,'(i6,2x,e24.17,2x,e24.17)') i, x, x/e(ieig)
            eval = eval + x
         enddo
         write(60,*) 'Energy sum',eval, 'Core energy',ecore
