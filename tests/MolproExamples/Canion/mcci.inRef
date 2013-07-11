@@ -1,0 +1,24 @@
+! mcci.in file for version four of mcci
+restart         = .false.                 ! .TRUE. sets inflg = 1, .FALSE sets inflg = 0
+n_up            = 4                     ! number of up electrons
+mo_up           = 1,5,7,10! occupied spin up orbital labels
+n_dn            = 1
+mo_dn           = 1 ! occupied spin up orbital labels
+s               =            1.5                     ! spin ( units of h_bar ) (principle case m_s = s)
+ieig            = 1                       ! ith eigenvalue
+frac            = 1.0
+maxtry          = 3000                ! how many diagonalisations?
+cmin            = 5.0d-4
+frozen_doubly   =  
+npfull          = 10
+i_want_conv     = .true.
+npfull_conv     = .true.
+conv_thresh_e   = 0.001
+conv_thresh_l   = 100.0
+conv_average    = 3            ! 3 fullprune steps are being averaged
+conv_history    = 3            ! 3 averaged Dvalues are being tracked
+SCF_integral_filename= "FCIDUMP"
+!parameters
+maxc = 200000
+kmax = 35
+maxh = 400000000

@@ -1,0 +1,279 @@
+
+ Primary working directories    : /Users/jeremycoe/GreerMCCI/V4mcci/molproTest/molpro2mcci/FinalVersion/N2
+ Secondary working directories  : /Users/jeremycoe/GreerMCCI/V4mcci/molproTest/molpro2mcci/FinalVersion/N2
+ Wavefunction directory         : /Users/jeremycoe/wfu/
+ Main file repository           : /Users/jeremycoe/GreerMCCI/V4mcci/molproTest/molpro2mcci/FinalVersion/N2/
+
+ ARCHNAME  : Darwin/x86_64
+ FC        : /usr/local/bin/gfortran
+ FCVERSION : 4.5.1
+ BLASLIB   : -L/System/Library/Frameworks/Accelerate.framework/Versions/Current/Frameworks/vecLib.framework/Versions/Current -lBLAS
+ id        : hw
+
+ Nodes              nprocs
+ imac10.eps.hw.ac.uk    1
+ ga_uses_ma=false, calling ma_init with nominal heap.
+ GA-space will be limited to   8.0 MW (determined by -G option)
+
+ Using customized tuning parameters: mindgm=90; mindgv=120; mindgc=28; mindgr=80; noblas=0; mincuda=1000; minvec=7
+ default implementation of scratch files=df  
+
+  MEMORY, 250, M
+  R1=2.0
+  geometry={N;N,N,R1}
+  basis=6-31G
+  hf;
+ {FCI;DUMP}
+
+ Variables initialized (664), CPU time= 0.01 sec
+ Commands  initialized (462), CPU time= 0.02 sec, 486 directives.
+ Default parameters read. Elapsed time= 0.05 sec
+
+ Checking input...
+ Passed
+1
+
+
+                                         ***  PROGRAM SYSTEM MOLPRO  ***
+                         Copyright, University College Cardiff Consultants Limited, 2008
+
+                                    Version 2010.1 linked 12 Oct 2011 13:49:05
+
+
+ **********************************************************************************************************************************
+ LABEL *                                                                                 
+ Darwin-10.8.0/imac10.eps.hw.ac.uk(i386) 64 bit mpp version                              DATE: 11-Jul-13          TIME: 13:17:19  
+ **********************************************************************************************************************************
+
+ Patch level:      13
+ **********************************************************************************************************************************
+ SETTING R1             =         2.00000000                                  
+
+ Variable memory set to  250000000 words,  buffer space   230000 words
+
+ SETTING BASIS          =    6-31G
+
+
+ Recomputing integrals since basis changed
+
+
+ Using spherical harmonics
+
+ Library entry N      S 6-31G                selected for orbital group  1
+ Library entry N      P 6-31G                selected for orbital group  1
+
+1PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 700
+
+ Orientation using atomic masses  
+ Molecule type: Linear
+ Symmetry elements: X,Y,Z
+ Rotational constants:      64.4242098     64.4242098      0.0000000 GHz  (calculated with average atomic masses)
+
+ Point group  D2h 
+
+
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  N       7.00    0.000000000    0.000000000   -1.000000000
+   2  N       7.00    0.000000000    0.000000000    1.000000000
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.000000000
+     (1.058354418)
+
+ NUCLEAR CHARGE:                   14
+ NUMBER OF PRIMITIVE AOS:          44
+ NUMBER OF SYMMETRY AOS:           44
+ NUMBER OF CONTRACTIONS:           18   (   5Ag  +   2B3u +   2B2u +   0B1g +   5B1u +   2B2g +   2B3g +   0Au  )
+ NUMBER OF CORE ORBITALS:           2   (   1Ag  +   0B3u +   0B2u +   0B1g +   1B1u +   0B2g +   0B3g +   0Au  )
+ NUMBER OF VALENCE ORBITALS:        8   (   2Ag  +   1B3u +   1B2u +   0B1g +   2B1u +   1B2g +   1B3g +   0Au  )
+
+
+ NUCLEAR REPULSION ENERGY   24.50000000
+
+
+ Eigenvalues of metric
+
+         1 0.245E+00 0.361E+00 0.929E+00 0.138E+01 0.325E+01
+         2 0.577E+00 0.222E+01
+         3 0.577E+00 0.222E+01
+         5 0.624E-02 0.319E+00 0.409E+00 0.958E+00 0.215E+01
+         6 0.239E+00 0.961E+00
+         7 0.239E+00 0.961E+00
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-11
+ AO integral compression algorithm  1   Integral accuracy      1.0D-11
+
+     0.262 MB (compressed) written to integral file (100.0%)
+
+     Node minimum: 0.262 MB, node maximum: 0.262 MB
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:       2829.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   1  SEGMENT LENGTH:       2829      RECORD LENGTH: 524288
+
+ Memory used in sort:       0.56 MW
+
+ SORT1 READ        8184. AND WROTE        2829. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.00 SEC
+ SORT2 READ        2829. AND WROTE        2829. INTEGRALS IN      1 RECORDS. CPU TIME:     0.01 SEC, REAL TIME:     0.01 SEC
+
+ FILE SIZES:   FILE 1:     2.6 MBYTE,  FILE 4:     4.2 MBYTE,   TOTAL:      6.8 MBYTE
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      19        2.57       500      610      700      900      950      970     1000      129      960     1100   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS      S 
+                                         1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+
+ PROGRAMS   *        TOTAL       INT
+ CPU TIMES  *         0.28      0.02
+ REAL TIME  *         0.31 SEC
+ DISK USED  *         7.52 MB      
+ GA USED    *         0.00 MB       (max)       0.00 MB       (current)
+ **********************************************************************************************************************************
+
+1PROGRAM * RHF-SCF (CLOSED SHELL)       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:       7+    7-
+ CONVERGENCE THRESHOLDS:    1.00E-05 (Density)    1.00E-07 (Energy)
+ MAX. NUMBER OF ITERATIONS:       60
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                  0.00 (CLOSED)  0.00 (OPEN) 
+
+
+
+ Orbital guess generated from atomic densities. Full valence occupancy:    3   1   1   0   3   1   1   0
+
+
+ Molecular orbital dump at record        2100.2
+
+ Initial alpha occupancy:   3   1   1   0   2   0   0
+ Initial beta  occupancy:   3   1   1   0   2   0   0
+ Wave function symmetry:    1
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS
+    1      0.000D+00      0.000D+00      -108.85361543    123.077673    0.00000    0.00000    0.00000    0
+    2      0.000D+00      0.305D-01      -108.86402473    124.396546    0.00000    0.00000    0.00000    1
+    3      0.412D-01      0.642D-02      -108.86456168    124.137247    0.00000    0.00000    0.00000    2
+    4      0.123D-01      0.151D-02      -108.86459921    124.164776    0.00000    0.00000    0.00000    3
+    5      0.327D-02      0.136D-03      -108.86459954    124.165043    0.00000    0.00000    0.00000    4
+    6      0.176D-03      0.214D-04      -108.86459955    124.165008    0.00000    0.00000    0.00000    5
+    7      0.301D-04      0.121D-05      -108.86459955    124.165027    0.00000    0.00000    0.00000    5
+    8      0.333D-05      0.157D-06      -108.86459955    124.165028    0.00000    0.00000    0.00000    0
+
+ Final occupancy:   3   1   1   0   2   0   0
+
+ !RHF STATE 1.1 Energy               -108.864599549164
+ Nuclear energy                        24.50000000
+ One-electron energy                 -195.44711346
+ Two-electron energy                   62.08251391
+ Virial quotient                       -0.99905176
+ !RHF STATE 1.1 Dipole moment           0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+
+ Orbital energies:
+
+         1.1          2.1          3.1          4.1          5.1
+    -15.707147    -1.557604    -0.633007     0.769133     0.948786
+
+         1.2          2.2
+     -0.639495     0.837482
+
+         1.3          2.3
+     -0.639495     0.837482
+
+         1.5          2.5          3.5          4.5
+    -15.702805    -0.761491     0.604600     1.209141
+
+         1.6          2.6
+      0.172558     1.022290
+
+         1.7          2.7
+      0.172558     1.022290
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      19        2.57       500      610      700      900      950      970     1000      129      960     1100   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS      S 
+                                         1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+
+              2       3        0.26       700     1000     2100   
+                                         GEOM     BASIS     RHF  
+
+ PROGRAMS   *        TOTAL        HF       INT
+ CPU TIMES  *         0.30      0.02      0.02
+ REAL TIME  *         0.32 SEC
+ DISK USED  *         7.52 MB      
+ GA USED    *         0.00 MB       (max)       0.00 MB       (current)
+ **********************************************************************************************************************************
+
+1PROGRAM * FCI (Full CI)     Author: P.J. Knowles, 1984
+
+ ***  Initialisation ***
+
+ Molecular orbitals read from record     2100.2  Type=RHF/CANONICAL (state 1.1)
+
+ Frozen orbitals:              2 (  1  0  0  0  1  0  0  0)
+ Active orbitals:             16 (  4  2  2  0  4  2  2  0)
+ Active electrons:            10
+ Spin quantum number:          0.0
+ Orbital pairs:                    32      16      16       8      24      16      16       8
+ Strings:                          -1      -1      -1      -1      -1      -1      -1      -1
+                                    0       0       0       0       0       0       0       0
+ Determinants wider:                    0           0           0           0           0           0           0           0
+
+ Load integrals                0.4 sec
+ Transform integrals           0.4 sec
+ Storage for integrals:           3280
+ Remaining memory:           249995784
+
+ Core energy:             -76.96031537
+ Run Hamiltonian processor DUMP    
+ Symmetry:                   1
+ Trial vector:                  0.00
+ Result vector:                 0.00
+ Maximum iterations:           90
+ Convergence threshold:         0.0000100
+ RHS vector:                    0.00
+ Hamiltonian shift:             0.0000000
+ Output threshold:              0.0500000
+ Options:                        0
+ Number of roots:             1
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      19        2.57       500      610      700      900      950      970     1000      129      960     1100   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS      S 
+                                         1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+
+              2       3        0.26       700     1000     2100   
+                                         GEOM     BASIS     RHF  
+
+ PROGRAMS   *        TOTAL       FCI        HF       INT
+ CPU TIMES  *         0.33      0.01      0.02      0.02
+ REAL TIME  *         0.36 SEC
+ DISK USED  *         7.52 MB      
+ GA USED    *         0.00 MB       (max)       0.00 MB       (current)
+ **********************************************************************************************************************************
+
+        HF-SCF  
+   -108.86459955
+ **********************************************************************************************************************************
+ Variable memory released

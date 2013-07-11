@@ -78,7 +78,7 @@ do
 
 if [ "${alphaorbs[$i]}" -eq "0" ]
   then
-  continue   
+	continue   
   fi
 
 for j in $(eval echo {0..$((${alphaorbs[$i]}-1))})
@@ -234,3 +234,5 @@ EOF
 rm occmolpro.in
 rm frozmolpro.in
 rm activemolpro.in
+
+

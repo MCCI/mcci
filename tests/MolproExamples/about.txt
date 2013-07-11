@@ -1,0 +1,16 @@
+
+
+The command {FCI;DUMP} at the end of a Molpro input file results in the one and two-electron integral file being produced (FCIDUMP) with frozen cores automatically chosen. {FCI;CORE;DUMP} does not freeze any orbital while {FCI;CORE,2,2;DUMP} freezes the first two orbitals of the first two symmetries.
+
+When running molpro, the option -d PATH can be used to create the FCIDUMP file in PATH.  
+
+Given a Molpro output file then 
+
+./MolproToMcci.sh outputfile 
+
+will produce an example mcci.in file for a ground-state calculation where the reference configuration corresponds to the Molpro Hartree-Fock result.  
+This file can then be tailored for a required calculation.
+
+
+Two example folders with reference input and output from a one processor calculation are provided.
+

@@ -1,0 +1,820 @@
+Thu Jul 11 13:18:20 2013 
+
+                    m c c i  3.0
+
+               written by J.C. Greer
+
+    =============================================
+    J.C. Greer, J. Chem. Phys. 103 (1995) p. 1821
+    J.C. Greer, J. Comp. Phys. 146 (1998) p. 181 
+    =============================================
+
+
+ The following parameters were read from mcci.in
+
+ parameters with no default values:
+ ----------------------------------
+
+ inflg                        =      0
+ n_alpha                      =      5
+ n_beta                       =      5
+ s                            =      0.0000
+ cmin                         =      5.00E-04
+ maxtry                       =   3000
+
+
+ parameters with default values:
+ -------------------------------
+
+ SCF_integral_filename        = FCIDUMP     
+
+ ieig                         =      1
+
+ nfreeze                      =      0
+ nactive                      =      0
+ lmin                         =    100
+ nbyte                        =      4
+ int_bits                     =     32
+ npfull                       =     10
+ lref                         =      0
+ lkeep                        =      0
+ conv_average                 =      3
+ conv_history                 =      3
+ hmin                         =      1.00E-18
+ davidson_stop                =      1.00E-07
+ bmin                         =      0.0000
+ bmax                         =      1.0000
+ cref                         =      0.1000
+ total frac                   =      1.0000
+ conv_thresh_e                =      0.0010
+ conv_thresh_l                =    100.0000
+ test                         =      F
+ time                         =      F
+ time_all                     =      F
+ generate_cfgs                =      T
+ nobrnch_first                =      F
+ nodiag                       =      F
+ i_want_conv                  =      T
+ npfull_conv                  =      T
+
+ Getting the one- and two-electron integrals from Molpro FCIDUMP
+ Calculating           1 th state in this irrep
+ Running on           1  nodes
+ Branching factor      f =   1.0000000000000000     
+ Davidson tolerance stop =  9.99999999999999955E-008
+ Coef.    tolerance cmin =  5.00000000000000010E-004
+ H        tolerance hmin =  1.00000000000000007E-018
+
+
+ Diagonalization           1
+
+ Iterations to convergence           1
+ E   =  -108.90772803331787 from iter. diag.
+ Branched  CI vector length=          48
+ Pruned    CI vector length=          48    *** Full pruning ***
+
+
+ Diagonalization           2
+
+ Iterations to convergence           1
+ E   =  -108.93589244180262 from iter. diag.
+ Branched  CI vector length=          96
+ Pruned    CI vector length=          63
+
+
+ Diagonalization           3
+
+ Iterations to convergence           1
+ E   =  -108.94816871365795 from iter. diag.
+ Branched  CI vector length=         120
+ Pruned    CI vector length=          82
+
+
+ Diagonalization           4
+
+ Iterations to convergence           1
+ E   =  -108.96264906865778 from iter. diag.
+ Branched  CI vector length=         153
+ Pruned    CI vector length=          99
+
+
+ Diagonalization           5
+
+ Iterations to convergence           1
+ E   =  -108.96959022487496 from iter. diag.
+ Branched  CI vector length=         181
+ Pruned    CI vector length=         115
+
+
+ Diagonalization           6
+
+ Iterations to convergence           1
+ E   =  -108.97541250928845 from iter. diag.
+ Branched  CI vector length=         212
+ Pruned    CI vector length=         132
+
+
+ Diagonalization           7
+
+ Iterations to convergence           1
+ E   =  -108.99058638436738 from iter. diag.
+ Branched  CI vector length=         248
+ Pruned    CI vector length=         164
+
+
+ Diagonalization           8
+
+ Iterations to convergence           1
+ E   =  -108.99452522346745 from iter. diag.
+ Branched  CI vector length=         302
+ Pruned    CI vector length=         185
+
+
+ Diagonalization           9
+
+ Iterations to convergence           1
+ E   =  -109.00282267203551 from iter. diag.
+ Branched  CI vector length=         354
+ Pruned    CI vector length=         225
+
+
+ Diagonalization          10
+
+ Iterations to convergence           1
+ E   =  -109.01173186247877 from iter. diag.
+ Branched  CI vector length=         417
+ Pruned    CI vector length=         248    *** Full pruning ***
+
+
+ Diagonalization          11
+
+ Iterations to convergence           1
+ E   =  -109.01421817484851 from iter. diag.
+ Branched  CI vector length=         468
+ Pruned    CI vector length=         276
+
+
+ Diagonalization          12
+
+ Iterations to convergence           1
+ E   =  -109.03251138532644 from iter. diag.
+ Branched  CI vector length=         523
+ Pruned    CI vector length=         325
+
+
+ Diagonalization          13
+
+ Iterations to convergence           1
+ E   =  -109.03775159870449 from iter. diag.
+ Branched  CI vector length=         609
+ Pruned    CI vector length=         373
+
+
+ Diagonalization          14
+
+ Iterations to convergence           1
+ E   =  -109.03892216351522 from iter. diag.
+ Branched  CI vector length=         691
+ Pruned    CI vector length=         411
+
+
+ Diagonalization          15
+
+ Iterations to convergence           1
+ E   =  -109.05255419266402 from iter. diag.
+ Branched  CI vector length=         758
+ Pruned    CI vector length=         464
+
+
+ Diagonalization          16
+
+ Iterations to convergence           1
+ E   =  -109.05559125742880 from iter. diag.
+ Branched  CI vector length=         830
+ Pruned    CI vector length=         528
+
+
+ Diagonalization          17
+
+ Iterations to convergence           1
+ E   =  -109.05789566713841 from iter. diag.
+ Branched  CI vector length=         987
+ Pruned    CI vector length=         593
+
+
+ Diagonalization          18
+
+ Iterations to convergence           1
+ E   =  -109.05936018722625 from iter. diag.
+ Branched  CI vector length=        1083
+ Pruned    CI vector length=         679
+
+
+ Diagonalization          19
+
+ Iterations to convergence           1
+ E   =  -109.06183278967444 from iter. diag.
+ Branched  CI vector length=        1242
+ Pruned    CI vector length=         755
+
+
+ Diagonalization          20
+
+ Iterations to convergence           1
+ E   =  -109.06387570936266 from iter. diag.
+ Branched  CI vector length=        1380
+ Pruned    CI vector length=         790    *** Full pruning ***
+
+
+ Diagonalization          21
+
+ Iterations to convergence           1
+ E   =  -109.06505170531229 from iter. diag.
+ Branched  CI vector length=        1445
+ Pruned    CI vector length=         868
+
+
+ Diagonalization          22
+
+ Iterations to convergence           1
+ E   =  -109.06635265740459 from iter. diag.
+ Branched  CI vector length=        1588
+ Pruned    CI vector length=         945
+
+
+ Diagonalization          23
+
+ Iterations to convergence           1
+ E   =  -109.06811716163628 from iter. diag.
+ Branched  CI vector length=        1708
+ Pruned    CI vector length=        1020
+
+
+ Diagonalization          24
+
+ Iterations to convergence           1
+ E   =  -109.07016705692681 from iter. diag.
+ Branched  CI vector length=        1824
+ Pruned    CI vector length=        1097
+
+
+ Diagonalization          25
+
+ Iterations to convergence           1
+ E   =  -109.07256668191212 from iter. diag.
+ Branched  CI vector length=        1952
+ Pruned    CI vector length=        1166
+
+
+ Diagonalization          26
+
+ Iterations to convergence           1
+ E   =  -109.07591089621391 from iter. diag.
+ Branched  CI vector length=        2081
+ Pruned    CI vector length=        1254
+
+
+ Diagonalization          27
+
+ Iterations to convergence           1
+ E   =  -109.07646096308338 from iter. diag.
+ Branched  CI vector length=        2256
+ Pruned    CI vector length=        1322
+
+
+ Diagonalization          28
+
+ Iterations to convergence           1
+ E   =  -109.07752919190042 from iter. diag.
+ Branched  CI vector length=        2375
+ Pruned    CI vector length=        1395
+
+
+ Diagonalization          29
+
+ Iterations to convergence           1
+ E   =  -109.07820466445813 from iter. diag.
+ Branched  CI vector length=        2488
+ Pruned    CI vector length=        1464
+
+
+ Diagonalization          30
+
+ Iterations to convergence           1
+ E   =  -109.07861510478594 from iter. diag.
+ Branched  CI vector length=        2610
+ Pruned    CI vector length=        1423    *** Full pruning ***
+
+
+ Diagonalization          31
+
+ Iterations to convergence           1
+ E   =  -109.07894779642712 from iter. diag.
+ Branched  CI vector length=        2545
+ Pruned    CI vector length=        1485
+
+
+ Diagonalization          32
+
+ Iterations to convergence           1
+ E   =  -109.07942070414666 from iter. diag.
+ Branched  CI vector length=        2661
+ Pruned    CI vector length=        1547
+
+
+ Diagonalization          33
+
+ Iterations to convergence           1
+ E   =  -109.07996978328740 from iter. diag.
+ Branched  CI vector length=        2770
+ Pruned    CI vector length=        1629
+
+
+ Diagonalization          34
+
+ Iterations to convergence           1
+ E   =  -109.08027195157433 from iter. diag.
+ Branched  CI vector length=        2894
+ Pruned    CI vector length=        1688
+
+
+ Diagonalization          35
+
+ Iterations to convergence           1
+ E   =  -109.08158279126108 from iter. diag.
+ Branched  CI vector length=        2989
+ Pruned    CI vector length=        1737
+
+
+ Diagonalization          36
+
+ Iterations to convergence           1
+ E   =  -109.08181861999111 from iter. diag.
+ Branched  CI vector length=        3064
+ Pruned    CI vector length=        1788
+
+
+ Diagonalization          37
+
+ Iterations to convergence           2
+ E   =  -109.08299885915085 from iter. diag.
+ Branched  CI vector length=        3175
+ Pruned    CI vector length=        1847
+
+
+ Diagonalization          38
+
+ Iterations to convergence           2
+ E   =  -109.08393459977387 from iter. diag.
+ Branched  CI vector length=        3244
+ Pruned    CI vector length=        1915
+
+
+ Diagonalization          39
+
+ Iterations to convergence           2
+ E   =  -109.08416216071913 from iter. diag.
+ Branched  CI vector length=        3372
+ Pruned    CI vector length=        1961
+
+
+ Diagonalization          40
+
+ Iterations to convergence           1
+ E   =  -109.08430280656837 from iter. diag.
+ Branched  CI vector length=        3514
+ Pruned    CI vector length=        1880    *** Full pruning ***
+
+
+ Diagonalization          41
+
+ Iterations to convergence           1
+ E   =  -109.08444938400561 from iter. diag.
+ Branched  CI vector length=        3341
+ Pruned    CI vector length=        1919
+
+
+ Diagonalization          42
+
+ Iterations to convergence           1
+ E   =  -109.08456956496440 from iter. diag.
+ Branched  CI vector length=        3409
+ Pruned    CI vector length=        1969
+
+
+ Diagonalization          43
+
+ Iterations to convergence           2
+ E   =  -109.08472569199512 from iter. diag.
+ Branched  CI vector length=        3468
+ Pruned    CI vector length=        2012
+
+
+ Diagonalization          44
+
+ Iterations to convergence           1
+ E   =  -109.08489179211887 from iter. diag.
+ Branched  CI vector length=        3535
+ Pruned    CI vector length=        2054
+
+
+ Diagonalization          45
+
+ Iterations to convergence           2
+ E   =  -109.08500357057204 from iter. diag.
+ Branched  CI vector length=        3608
+ Pruned    CI vector length=        2091
+
+
+ Diagonalization          46
+
+ Iterations to convergence           1
+ E   =  -109.08519866847467 from iter. diag.
+ Branched  CI vector length=        3710
+ Pruned    CI vector length=        2132
+
+
+ Diagonalization          47
+
+ Iterations to convergence           1
+ E   =  -109.08533132757935 from iter. diag.
+ Branched  CI vector length=        3801
+ Pruned    CI vector length=        2175
+
+
+ Diagonalization          48
+
+ Iterations to convergence           1
+ E   =  -109.08543461850292 from iter. diag.
+ Branched  CI vector length=        3839
+ Pruned    CI vector length=        2212
+
+
+ Diagonalization          49
+
+ Iterations to convergence           1
+ E   =  -109.08556310270399 from iter. diag.
+ Branched  CI vector length=        3881
+ Pruned    CI vector length=        2256
+
+
+ Diagonalization          50
+
+ Iterations to convergence           1
+ E   =  -109.08561859687893 from iter. diag.
+ Branched  CI vector length=        3991
+ Pruned    CI vector length=        2159    *** Full pruning ***
+
+
+ Diagonalization          51
+
+ Iterations to convergence           1
+ E   =  -109.08559921054515 from iter. diag.
+ Branched  CI vector length=        3863
+ Pruned    CI vector length=        2200
+
+
+ Diagonalization          52
+
+ Iterations to convergence           2
+ E   =  -109.08565523239480 from iter. diag.
+ Branched  CI vector length=        3865
+ Pruned    CI vector length=        2234
+
+
+ Diagonalization          53
+
+ Iterations to convergence           2
+ E   =  -109.08570270993829 from iter. diag.
+ Branched  CI vector length=        3918
+ Pruned    CI vector length=        2257
+
+
+ Diagonalization          54
+
+ Iterations to convergence           2
+ E   =  -109.08575611235767 from iter. diag.
+ Branched  CI vector length=        3971
+ Pruned    CI vector length=        2291
+
+
+ Diagonalization          55
+
+ Iterations to convergence           2
+ E   =  -109.08586002016270 from iter. diag.
+ Branched  CI vector length=        4049
+ Pruned    CI vector length=        2321
+
+
+ Diagonalization          56
+
+ Iterations to convergence           2
+ E   =  -109.08589659525263 from iter. diag.
+ Branched  CI vector length=        4085
+ Pruned    CI vector length=        2346
+
+
+ Diagonalization          57
+
+ Iterations to convergence           2
+ E   =  -109.08594554299640 from iter. diag.
+ Branched  CI vector length=        4135
+ Pruned    CI vector length=        2380
+
+
+ Diagonalization          58
+
+ Iterations to convergence           2
+ E   =  -109.08607924831934 from iter. diag.
+ Branched  CI vector length=        4243
+ Pruned    CI vector length=        2408
+
+
+ Diagonalization          59
+
+ Iterations to convergence           2
+ E   =  -109.08611189846275 from iter. diag.
+ Branched  CI vector length=        4212
+ Pruned    CI vector length=        2436
+
+
+ Diagonalization          60
+
+ Iterations to convergence           2
+ E   =  -109.08618467133454 from iter. diag.
+ Branched  CI vector length=        4227
+ Pruned    CI vector length=        2343    *** Full pruning ***
+
+
+ Diagonalization          61
+
+ Iterations to convergence           2
+ E   =  -109.08609320984498 from iter. diag.
+ Branched  CI vector length=        4140
+ Pruned    CI vector length=        2363
+
+
+ Diagonalization          62
+
+ Iterations to convergence           2
+ E   =  -109.08623818768892 from iter. diag.
+ Branched  CI vector length=        4193
+ Pruned    CI vector length=        2386
+
+
+ Diagonalization          63
+
+ Iterations to convergence           2
+ E   =  -109.08624969290707 from iter. diag.
+ Branched  CI vector length=        4201
+ Pruned    CI vector length=        2410
+
+
+ Diagonalization          64
+
+ Iterations to convergence           2
+ E   =  -109.08630060315514 from iter. diag.
+ Branched  CI vector length=        4233
+ Pruned    CI vector length=        2433
+
+
+ Diagonalization          65
+
+ Iterations to convergence           2
+ E   =  -109.08629321773799 from iter. diag.
+ Branched  CI vector length=        4290
+ Pruned    CI vector length=        2448
+
+
+ Diagonalization          66
+
+ Iterations to convergence           2
+ E   =  -109.08636666661099 from iter. diag.
+ Branched  CI vector length=        4322
+ Pruned    CI vector length=        2478
+
+
+ Diagonalization          67
+
+ Iterations to convergence           2
+ E   =  -109.08638018421705 from iter. diag.
+ Branched  CI vector length=        4333
+ Pruned    CI vector length=        2491
+
+
+ Diagonalization          68
+
+ Iterations to convergence           2
+ E   =  -109.08641785028676 from iter. diag.
+ Branched  CI vector length=        4398
+ Pruned    CI vector length=        2506
+
+
+ Diagonalization          69
+
+ Iterations to convergence           2
+ E   =  -109.08643808797694 from iter. diag.
+ Branched  CI vector length=        4425
+ Pruned    CI vector length=        2520
+
+
+ Diagonalization          70
+
+ Iterations to convergence           2
+ E   =  -109.08645590022505 from iter. diag.
+ Branched  CI vector length=        4434
+ Pruned    CI vector length=        2432    *** Full pruning ***
+
+
+ Diagonalization          71
+
+ Iterations to convergence           2
+ E   =  -109.08638018229482 from iter. diag.
+ Branched  CI vector length=        4258
+ Pruned    CI vector length=        2441
+
+
+ Diagonalization          72
+
+ Iterations to convergence           2
+ E   =  -109.08642479646221 from iter. diag.
+ Branched  CI vector length=        4277
+ Pruned    CI vector length=        2472
+
+
+ Diagonalization          73
+
+ Iterations to convergence           2
+ E   =  -109.08660151476444 from iter. diag.
+ Branched  CI vector length=        4372
+ Pruned    CI vector length=        2487
+
+
+ Diagonalization          74
+
+ Iterations to convergence           2
+ E   =  -109.08662430164119 from iter. diag.
+ Branched  CI vector length=        4387
+ Pruned    CI vector length=        2505
+
+
+ Diagonalization          75
+
+ Iterations to convergence           2
+ E   =  -109.08663808425848 from iter. diag.
+ Branched  CI vector length=        4397
+ Pruned    CI vector length=        2526
+
+
+ Diagonalization          76
+
+ Iterations to convergence           1
+ E   =  -109.08666665489116 from iter. diag.
+ Branched  CI vector length=        4469
+ Pruned    CI vector length=        2537
+
+
+ Diagonalization          77
+
+ Iterations to convergence           2
+ E   =  -109.08668359245200 from iter. diag.
+ Branched  CI vector length=        4486
+ Pruned    CI vector length=        2549
+
+
+ Diagonalization          78
+
+ Iterations to convergence           2
+ E   =  -109.08668608426601 from iter. diag.
+ Branched  CI vector length=        4462
+ Pruned    CI vector length=        2566
+
+
+ Diagonalization          79
+
+ Iterations to convergence           2
+ E   =  -109.08669789431104 from iter. diag.
+ Branched  CI vector length=        4487
+ Pruned    CI vector length=        2576
+
+
+ Diagonalization          80
+
+ Iterations to convergence           2
+ E   =  -109.08672755414202 from iter. diag.
+ Branched  CI vector length=        4503
+ Pruned    CI vector length=        2473    *** Full pruning ***
+
+
+ Diagonalization          81
+
+ Iterations to convergence           2
+ E   =  -109.08666678011696 from iter. diag.
+ Branched  CI vector length=        4345
+ Pruned    CI vector length=        2495
+
+
+ Diagonalization          82
+
+ Iterations to convergence           2
+ E   =  -109.08668471489410 from iter. diag.
+ Branched  CI vector length=        4431
+ Pruned    CI vector length=        2509
+
+
+ Diagonalization          83
+
+ Iterations to convergence           2
+ E   =  -109.08671813209151 from iter. diag.
+ Branched  CI vector length=        4462
+ Pruned    CI vector length=        2525
+
+
+ Diagonalization          84
+
+ Iterations to convergence           2
+ E   =  -109.08672300744334 from iter. diag.
+ Branched  CI vector length=        4429
+ Pruned    CI vector length=        2537
+
+
+ Diagonalization          85
+
+ Iterations to convergence           2
+ E   =  -109.08673499061091 from iter. diag.
+ Branched  CI vector length=        4452
+ Pruned    CI vector length=        2552
+
+
+ Diagonalization          86
+
+ Iterations to convergence           2
+ E   =  -109.08675221508784 from iter. diag.
+ Branched  CI vector length=        4546
+ Pruned    CI vector length=        2562
+
+
+ Diagonalization          87
+
+ Iterations to convergence           2
+ E   =  -109.08674824174285 from iter. diag.
+ Branched  CI vector length=        4480
+ Pruned    CI vector length=        2573
+
+
+ Diagonalization          88
+
+ Iterations to convergence           2
+ E   =  -109.08678932139907 from iter. diag.
+ Branched  CI vector length=        4526
+ Pruned    CI vector length=        2586
+
+
+ Diagonalization          89
+
+ Iterations to convergence           2
+ E   =  -109.08678418728725 from iter. diag.
+ Branched  CI vector length=        4507
+ Pruned    CI vector length=        2596
+
+
+ Diagonalization          90
+
+ Iterations to convergence           2
+ E   =  -109.08679475457355 from iter. diag.
+ Branched  CI vector length=        4557
+ Pruned    CI vector length=        2508    *** Full pruning ***
+
+
+ Diagonalization          91
+
+ Iterations to convergence           2
+ E   =  -109.08673670300712 from iter. diag.
+ Branched  CI vector length=        4393
+ Pruned    CI vector length=        2523
+
+
+ Diagonalization          92
+
+ Iterations to convergence           1
+ E   =  -109.08655332377789 from iter. diag.
+ Branched  CI vector length=        2523
+ Pruned    CI vector length=        2523
+ =========================
+ Converged for Cmin:  5.00000000000000010E-004
+ =========================
+
+
+ Diagonalization          93
+
+ Iterations to convergence           2
+ E   =  -109.08675731296530 from iter. diag.
+ Branched  CI vector length=        4433
+ Pruned    CI vector length=        2508    *** Full pruning ***
+
+
+ Diagonalization          94
+
+ Iterations to convergence           2
+ E   =  -109.08654179995817 from iter. diag.
+ Branched  CI vector length=        2508
