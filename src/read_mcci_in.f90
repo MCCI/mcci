@@ -227,10 +227,11 @@ subroutine read_mcci_in(iword,maxc,maxocc,maxbfs,               &
         case ('moints.bTM')
         case ('moints.TM')
         case ('moints.ascii')
+        case ('FCIDUMP')
         case default
            if (me.eq.0) then
               write(50,*) 
-              write(50,*) 'SCF_integral_filename must be one of moints.bTM, moints.TM or moints.ascii'
+              write(50,*) 'SCF_integral_filename must be one of moints.bTM, moints.TM, moints.ascii or FCIDUMP.'
               write(50,*) 'Stopping...'
            endif
            stop

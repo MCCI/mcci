@@ -42,6 +42,12 @@ subroutine init(seed,ecore,inflg,ieig)
      if (me.eq.0) write(50,*) 'Getting the one- and two-electron integrals from moints.bTM'
      call get_int_bTM(ecore)
   end if
+
+  if (SCF_integral_filename .eq. 'FCIDUMP') then
+     if (me.eq.0) write(50,*) 'Getting the one- and two-electron integrals from Molpro FCIDUMP'
+     call get_intMolpro(ecore)
+  end if
+
   !     now we know nbft, set up the defaults for the complete active space part,
   !     where if nactive has been set to 0 or left unset, all nonfrozen orbitals are active
 

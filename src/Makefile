@@ -25,11 +25,16 @@
 #
 #------F90 on rocks-hpc-------------------------
 
-         FC     =  mpif90
-         FFLAGS = -i4 -r8 -O4 
-         LFLAGS = -llapack -lblas
-         LIBS   =  
+#         FC     =  mpif90
+#         FFLAGS = -i4 -r8 -O4 
+#         LFLAGS = -llapack -lblas
+#         LIBS   =  
 
+#-------Gfortran --------------
+         FC     =  mpif90
+         FFLAGS = -O3 
+         LIBS = -llapack -lblas
+  
   
 #------PGF90 on sfi400.tyndall.ie----------------
 #  
@@ -72,7 +77,7 @@ OBJS =  mcci.o get_int.o branch.o singles.o doubles.o reorder.o swap.o\
         wxmxv_sparse.o h_move.o s_move.o timer.o ck.o dump.o   \
         ldump.o genealogy.o davidson.o h_s_reduced.o init_bk.o exc.o \
         get_int_TM.o get_int_bTM.o precision.o read_mcci_in.o commonarrays.o \
-	dyn_par.o read_params.o
+	dyn_par.o read_params.o get_intMolpro.o get_Molproparams.o
 
 mcci:   $(OBJS)
 	$(FC) $(LFLAGS) -o $(DEST)$@ $(OBJS) $(LAPACK) $(LIBS) 
@@ -122,12 +127,14 @@ h_s_reduced.o:
 init_bk.o:		
 get_int_TM.o:		dyn_par.o
 get_int_bTM.o:		dyn_par.o
+get_intMolpro.o:        dyn_par.o commonarrays.o
 precision.o:            
 exc.o:                  dyn_par.o
 read_mcci_in.o:		precision.o dyn_par.o
 commonarrays.o:         
 dyn_par.o:
 read_params.o:          precision.o dyn_par.o commonarrays.o
+get_intMolpro.o:        dyn_par.o commonarrays.o
 
 .SUFFIXES:
 .SUFFIXES: .o .f .f90

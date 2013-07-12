@@ -84,10 +84,11 @@ subroutine read_params()
         select case (trim(SCF_integral_filename))
         case ('moints.TM')
         case ('moints.ascii')
+        case ('FCIDUMP')
         case default
            if (me.eq.0) then
               write(50,*)
-              write(50,*) 'SCF_integral_filename must be moints.TM or moints.ascii'
+              write(50,*) 'SCF_integral_filename must be moints.TM, moints.ascii or FCIDUMP.'
               write(50,*) 'Stopping...'
            endif
            stop
@@ -133,6 +134,9 @@ subroutine read_params()
      open(20, file='moints.ascii', form='formatted')
      read(20,'(6i9)') rubbish(1), irmax, maxbfs, rubbish(2), rubbish(3), rubbish(4)
      close(20)
+  
+  case ('FCIDUMP')
+  call get_Molproparams(maxbfs,irmax) 
 
   case('moints.TM')
      open(20,file='moints.TM',form='formatted')
