@@ -36,5 +36,6 @@ module dyn_par
       logical nodiag          ! only for collecting CSFs
       logical i_want_conv     ! stop mcci by using convergence crit.
       logical npfull_conv     ! convergence test only in npfull steps
+      logical run_pt2             ! Run mccipt2 after mcci calculation
 
 end module dyn_par

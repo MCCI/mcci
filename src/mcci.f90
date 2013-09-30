@@ -334,7 +334,50 @@ program mcci
 
 2010 format(1x,'Cumul. run time',f12.3,' s')
 
-  !  call pend                              ! TCGMSG
+  !  call pend 
+                             ! TCGMSG
+!!!!!!!!!!!! MCCIPT2 !!!!!!!!
+  if(me.eq.0.AND.run_pt2) THEN
+
+  open(50,file='e_summary',status='old',position='append')
+           write(50,*)
+           write(50,*) '========================='
+           write(50,*) '       MCCIPT2           '
+           write(50,*) 
+           write(50,*)  'J. P. Coe and M. J. Paterson, J. Chem. Phys. 137, 204108 (2012).'
+           write(50,*)
+           write(50,*) 'Configurations will be added if they contribute more than'
+           write (50,*) cmin,'to the MCCIPT2 energy.'
+           write(50,*) '========================='
+           write(50,*)
+
+  do
+  call flush(50)
+  call PT2(length,llast,deltaE)
+
+  If(llast.eq.length) THEN
+
+  WRITE(50,*) 'MCCIPT2 E =',eval+ecore+deltaE
+  EXIT
+  END IF
+
+    WRITE(50,*) 'Added',length-llast,'configurations.'
+    call h_move(length,llast)
+                  call s_move(length,llast)
+
+      
+	         call h_s_sparse(length,0)
+                 call davidson(length,ieig,idiag)
+
+
+                 call energy(length,eval,dnorm)
+                WRITE(50,*) 'E = ',eval+ecore
+                WRITE(50,*)
+  end do
+  close(50)
+  END IF
+!!!!! End of MCCIPT2 !!!!!!!
+
   call mpi_finalize(ierr)                   ! MPI
 
 

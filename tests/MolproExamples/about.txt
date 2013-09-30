@@ -12,5 +12,6 @@ will produce an example mcci.in file for a ground-state calculation where the re
 This file can then be tailored for a required calculation.
 
 
-Two example folders with reference input and output from a one processor calculation are provided.
+Two example folders with reference input and output from a one processor calculation are provided. One example folder for a MCCIPT2 calculation has 
+been added.
 

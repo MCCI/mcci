@@ -22,5 +22,6 @@ module commonarrays
   integer                  ::   me, nproc
   integer                  ::   ntotal, n_alpha, n_beta, i_sx2
   integer                  ::   nsym, nbft
+  integer,allocatable:: Ipt(:,:,:)
 
 end module commonarrays

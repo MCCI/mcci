@@ -10,7 +10,8 @@ subroutine read_mcci_in(iword,maxc,maxocc,maxbfs,               &
                           cref,frac,conv_thresh_e,conv_thresh_l,&
                           test,time,time_all,generate_cfgs,     &
                           nobrnch_first,nodiag,i_want_conv,     &
-                          npfull_conv,auto_cmin,cmin_finish
+                          npfull_conv,auto_cmin,cmin_finish,    &
+                          run_pt2
 
   ! written by Paul Delaney 25 October 2005.
   
@@ -116,6 +117,7 @@ subroutine read_mcci_in(iword,maxc,maxocc,maxbfs,               &
   npfull_conv       = .TRUE.       ! convergence test only in npfull steps
   auto_cmin         = .FALSE.      ! Auto-adjust cmin
   cmin_finish       = 1e-4_pr
+  run_pt2=.FALSE.
   open(10, file='mcci.in', form='formatted', status='old')
   rewind(10)
 
@@ -365,6 +367,9 @@ subroutine read_mcci_in(iword,maxc,maxocc,maxbfs,               &
 
      case ('npfull_conv')
         read(value_string,*) npfull_conv
+      
+     case ('run_pt2')
+       read(value_string,*) run_pt2
 
      !The following three keywords are related to memory parameters
      !and are ignored by read_mcci_in
