@@ -1,8 +1,7 @@
-Monte Carlo Configuration Interaction
-=====================================
+# Monte Carlo Configuration Interaction
 
-Welcome to the web page of the Monte Carlo Configuration Interaction (MCCI)
-program. MCCI calculates electronic structure of molecular systems using a
+Monte Carlo Configuration Interaction (MCCI) is a computer program that
+calculates electronic structure of molecular systems using a
 method based on Configuration Interaction (CI). In conventional CI, all
 configurations (usually spin-projected Slater Determinants, or Configuration
 State Functions (CSFs)) up to a given excitation level are included in the wave
@@ -11,6 +10,7 @@ CSFs to include (and thus also the dimensions of the matrix to be
 diagonalized) increases combinatorially with the truncation level. In addition,
 the fixed truncation level of conventional CI causes the method to be
 non-size-consistent.
+
 MCCI is based on the observation that in a given vector from a truncated CI
 run, only a small fraction of the CSFs produce a significant contribution to
 the wave function, i.e. the absolute value of their coefficient in the
@@ -31,8 +31,6 @@ As its input data, MCCI requires a list of molecular orbital (MO) operator
 integrals of the Hamiltonian's one- and two-body operators. Any electronic
 structure program that can output these integrals can in principle be used.
 
-Examples
-========
 Since the mcci algorithm relies on random sampling of the CSF space and retains
 CSFs based on their contribution to the wave function, it encounters no
 problems describing systems with significant multireference (i.e. more than one
@@ -40,6 +38,7 @@ significant CSF) character. Even with a large significance threshold (e.g.
 cmin=5.0 E-3), the algorithm will reliably find the most significant CSFs, at a
 significantly reduced computational cost compared to other multi-configuration
 methods.
+
 Also of note is the scaling behaviour of the code; the figure below shows a
 graphical interpretation of the CI matrix obtained from a run of mcci. The
 stronger interactions (in red) all involve a limited set of CSFs, which we call
@@ -48,8 +47,7 @@ the exapansion, different nodes can sample the extended space independently
 (since those CSFs won't interact strongly with each other), producing
 near-linear scaling.
 
-Compile Instructions
-====================
+## Compile Instructions
 
 The provided Makefile assumes the availability of an MPI-enabled
 Fortran 90 compiler under the name 'mpif90'. This can be changed
@@ -62,8 +60,7 @@ changed, depending on the behaviour of the system_clock standard
 subroutine on the platform used.
 
 
-Keywords for the mcci.in file
------------------------------
+## Keywords for the mcci.in file
 
     ieig              =  Eigenvalue to be calculated. Each eigenvalue in each irrep begins with ieig=1 
                          i.e. ieig=1 is lowest energy eigenvalue in an irrep, ieig=2 is first excitation in an irrep, ... 
@@ -106,8 +103,7 @@ Keywords for the mcci.in file
     lref              =  Branch (i.e. generate new CSFs) relative to only the first lref CSFs in a CI vector
 
 
-Example: setting up a calculation in a higher symmetry
-======================================================
+## Example: setting up a calculation in a higher symmetry
 
 From the original control file that is obtained from the geometry relaxed
 system, note the numbers for the occupied symmetries, e.g.
@@ -143,11 +139,9 @@ following :
 
 And when filling in the mcci.in file , the same rule applies.
 
-Publications
-============
+## Publications
 
-Method
-------
+### Method
 
 * Estimating Full Configuration Interaction Limits from a Monte Carlo Selection of the Expansion Space, J.C. Greer, Journal of Chemical Physics, 103 pp. 1821-1828 (1995)
 
@@ -157,8 +151,7 @@ Method
 
 * A Monte Carlo Configuration Generation Computer Program for the Calculation of Electronic States of Atoms, Molecules and Quantum Dots, L. Tong, M. Nolan, T. Cheng and J. C. Greer, Computer Physics Communications, 131 pp. 142-163 (2000)
 
-Applications
-------------
+### Applications
 
 * Consistent Treatment of Correlation Effects in Molecular Dissociation Studies Using Randomly Chosen Configurations, J. C. Greer, Journal of Chemical Physics, 103 pp. 7996-8003 (1995)
 
@@ -168,8 +161,7 @@ Applications
 
 * Spin-polarisation Mechanisms of the Nitrogen-Vacancy Center in Diamond, P. Delaney, J.C. Greer, and J.A. Larsson, Nano Letters, 10, 610-614 (2010)
 
-Miscellaneous
-=============
+### Miscellaneous
 
 *  Impact of Electron-Electron Cusp on Configuration Interaction Energies, D. Prendergast, M. Nolan, C. Filippi, S. Fahy, and J. C. Greer, Journal of Chemical Physics, 115 pp. 1626-1634 (2001)
 
@@ -179,8 +171,7 @@ Miscellaneous
 
 * Determining Complex Absorbing Potentials from Electron Self Energies, T. M. Henderson, G. Fagas, E. Hyde, and J. C. Greer, Journal of Chemical Physics, 125,  244104 (2006)
 
-Applications in Molecular Electronics (with the program VICI)
-=============================================================
+### Applications in Molecular Electronics (with the program VICI)
 
 * Correlated Electron Transport in Molecular Electronics, P. Delaney and J. C. Greer, Physical Review Letters, 93 pp. 036805-036808 (2004)
 
@@ -192,15 +183,15 @@ Applications in Molecular Electronics (with the program VICI)
 
 * A Comparative Study for the Calculation of Tunnel Currents Across Silane Diamines/Dithiols and Alkane Diamines/Dithiols, Shane McDermott, Chris George, Giorgos Fagas, J. C. Greer, and M. A. Ratner, Journal of Physical Chemistry C, 113, pp. 744-750 (2009) 
 
-Contributors
-============
+## Contributors
+
 * Jim Greer
 * Werner Gyorffy
 * Thomas Kelly
 * Mark Szepieniec
 * Jeremy Coe
 
-Contact
-=======
+## Contact
+
 
 For questions, comments or troubleshooting assistance, please email jim.greer@tyndall.ie
