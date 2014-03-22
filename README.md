@@ -47,50 +47,6 @@ the exapansion, different nodes can sample the extended space independently
 (since those CSFs won't interact strongly with each other), producing
 near-linear scaling.
 
-## Publications
-
-### Method
-
-* Estimating Full Configuration Interaction Limits from a Monte Carlo Selection of the Expansion Space, J.C. Greer, Journal of Chemical Physics, 103 pp. 1821-1828 (1995)
-
-* Monte Carlo Configuration Interaction, J. C. Greer, Journal of Computational Physics, 146 pp. 181-202 (1998)
-
-* A Parallelization Model for Successive Approximations to the Rayleigh-Ritz Linear Variational Problem, J.C. Greer, IEEE Transactions on Parallel and Distributed Systems, 9 pp. 938-951 (1998)
-
-* A Monte Carlo Configuration Generation Computer Program for the Calculation of Electronic States of Atoms, Molecules and Quantum Dots, L. Tong, M. Nolan, T. Cheng and J. C. Greer, Computer Physics Communications, 131 pp. 142-163 (2000)
-
-### Applications
-
-* Consistent Treatment of Correlation Effects in Molecular Dissociation Studies Using Randomly Chosen Configurations, J. C. Greer, Journal of Chemical Physics, 103 pp. 7996-8003 (1995)
-
-* Electronic Correlation Energy in Linear and Cyclic Carbon Tetramers, J. C. Greer, Chemical Physics Letters, 306 pp. 197-201 (1999)
-
-* Monte Carlo Configuration Interaction Predictions for the Electronic Spectra of Ne, CH2, C2, N2, and H2O Compared to Full Configuration Interaction Calculations, W. Gyoffry, R. J. Bartlett and J. C. Greer, Journal of Chemical Physics 129, 064103 (2008)
-
-* Spin-polarisation Mechanisms of the Nitrogen-Vacancy Center in Diamond, P. Delaney, J.C. Greer, and J.A. Larsson, Nano Letters, 10, 610-614 (2010)
-
-### Miscellaneous
-
-*  Impact of Electron-Electron Cusp on Configuration Interaction Energies, D. Prendergast, M. Nolan, C. Filippi, S. Fahy, and J. C. Greer, Journal of Chemical Physics, 115 pp. 1626-1634 (2001)
-
-* Tools for Analysing Configuration Interaction Wavefunctions, P. Delaney and J. C. Greer, Computational Materials Science, 28 pp. 240-249 (2003)
-
-* Statistical Estimates of Electron Correlations, W. Gyoffry, T. M. Henderson and J. C. Greer, Journal of Chemical Physics, 125, 054104 (2006)
-
-* Determining Complex Absorbing Potentials from Electron Self Energies, T. M. Henderson, G. Fagas, E. Hyde, and J. C. Greer, Journal of Chemical Physics, 125,  244104 (2006)
-
-### Applications in Molecular Electronics (with the program VICI)
-
-* Correlated Electron Transport in Molecular Electronics, P. Delaney and J. C. Greer, Physical Review Letters, 93 pp. 036805-036808 (2004)
-
-* Quantum Electronic Transport in a Configuration Interaction Basis, P. Delaney and J. C. Greer, International Journal of Quantum Chemistry, 100 pp.1163-1169 (2004)
-
-* Independent Particle Descriptions of Tunneling Using the Many-body Quantum Transport Approach, G. Fagas, P. Delaney and J. C. Greer, Physical Review B, 73, 241314(R) (2006).
-
-* Tunnelling in Alkanes Anchored to Gold Electrodes via Amine Groups, G. Fagas and J. C. Greer, Nanotechnology, 18 424010 (2007)
-
-* A Comparative Study for the Calculation of Tunnel Currents Across Silane Diamines/Dithiols and Alkane Diamines/Dithiols, Shane McDermott, Chris George, Giorgos Fagas, J. C. Greer, and M. A. Ratner, Journal of Physical Chemistry C, 113, pp. 744-750 (2009) 
-
 ## Contributors
 
 * Jim Greer
@@ -185,3 +141,48 @@ system.
 The main output files are e_summary, which contains the energy and CI
 vector length for each iteration, plus additional data, and civ_out,
 which contains the final CI vector.
+
+## Publications
+
+### Method
+
+* Estimating Full Configuration Interaction Limits from a Monte Carlo Selection of the Expansion Space, J.C. Greer, Journal of Chemical Physics, 103 pp. 1821-1828 (1995)
+
+* Monte Carlo Configuration Interaction, J. C. Greer, Journal of Computational Physics, 146 pp. 181-202 (1998)
+
+* A Parallelization Model for Successive Approximations to the Rayleigh-Ritz Linear Variational Problem, J.C. Greer, IEEE Transactions on Parallel and Distributed Systems, 9 pp. 938-951 (1998)
+
+* A Monte Carlo Configuration Generation Computer Program for the Calculation of Electronic States of Atoms, Molecules and Quantum Dots, L. Tong, M. Nolan, T. Cheng and J. C. Greer, Computer Physics Communications, 131 pp. 142-163 (2000)
+
+### Applications
+
+* Consistent Treatment of Correlation Effects in Molecular Dissociation Studies Using Randomly Chosen Configurations, J. C. Greer, Journal of Chemical Physics, 103 pp. 7996-8003 (1995)
+
+* Electronic Correlation Energy in Linear and Cyclic Carbon Tetramers, J. C. Greer, Chemical Physics Letters, 306 pp. 197-201 (1999)
+
+* Monte Carlo Configuration Interaction Predictions for the Electronic Spectra of Ne, CH2, C2, N2, and H2O Compared to Full Configuration Interaction Calculations, W. Gyoffry, R. J. Bartlett and J. C. Greer, Journal of Chemical Physics 129, 064103 (2008)
+
+* Spin-polarisation Mechanisms of the Nitrogen-Vacancy Center in Diamond, P. Delaney, J.C. Greer, and J.A. Larsson, Nano Letters, 10, 610-614 (2010)
+
+### Miscellaneous
+
+*  Impact of Electron-Electron Cusp on Configuration Interaction Energies, D. Prendergast, M. Nolan, C. Filippi, S. Fahy, and J. C. Greer, Journal of Chemical Physics, 115 pp. 1626-1634 (2001)
+
+* Tools for Analysing Configuration Interaction Wavefunctions, P. Delaney and J. C. Greer, Computational Materials Science, 28 pp. 240-249 (2003)
+
+* Statistical Estimates of Electron Correlations, W. Gyoffry, T. M. Henderson and J. C. Greer, Journal of Chemical Physics, 125, 054104 (2006)
+
+* Determining Complex Absorbing Potentials from Electron Self Energies, T. M. Henderson, G. Fagas, E. Hyde, and J. C. Greer, Journal of Chemical Physics, 125,  244104 (2006)
+
+### Applications in Molecular Electronics (with the program VICI)
+
+* Correlated Electron Transport in Molecular Electronics, P. Delaney and J. C. Greer, Physical Review Letters, 93 pp. 036805-036808 (2004)
+
+* Quantum Electronic Transport in a Configuration Interaction Basis, P. Delaney and J. C. Greer, International Journal of Quantum Chemistry, 100 pp.1163-1169 (2004)
+
+* Independent Particle Descriptions of Tunneling Using the Many-body Quantum Transport Approach, G. Fagas, P. Delaney and J. C. Greer, Physical Review B, 73, 241314(R) (2006).
+
+* Tunnelling in Alkanes Anchored to Gold Electrodes via Amine Groups, G. Fagas and J. C. Greer, Nanotechnology, 18 424010 (2007)
+
+* A Comparative Study for the Calculation of Tunnel Currents Across Silane Diamines/Dithiols and Alkane Diamines/Dithiols, Shane McDermott, Chris George, Giorgos Fagas, J. C. Greer, and M. A. Ratner, Journal of Physical Chemistry C, 113, pp. 744-750 (2009) 
+
